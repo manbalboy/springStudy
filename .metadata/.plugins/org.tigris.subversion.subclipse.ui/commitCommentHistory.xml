@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CommitComments>	<CommitComment>스프링 컨텍스트 완료 1.8 버전</CommitComment>
+<CommitComments>	<CommitComment>Pom.xml ojdbc7 setting</CommitComment>
+	<CommitComment>스프링컨테이너 안에 있는 객체들은 같은 객체일까?</CommitComment>
+	<CommitComment>Initial import.</CommitComment>
+	<CommitComment>스프링 컨텍스트 완료 1.8 버전</CommitComment>
 	<CommitComment>fs</CommitComment>
 </CommitComments>

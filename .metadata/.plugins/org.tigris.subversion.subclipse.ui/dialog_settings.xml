@@ -10,8 +10,15 @@
 	<item key="HistoryTableProvider.SVNHistoryPage.Date" value="346"/>
 	<item key="HistoryTableProvider.SVNHistoryPage.Author" value="276"/>
 	<item key="HistoryTableProvider.SVNHistoryPage.Comment" value="691"/>
+	<item key="RepositorySelectionPage.lastRepository" value="svn://manbalboy.iptime.org/home2020"/>
+	<item key="DirectorySelectionPage.lastParent_svn://manbalboy.iptime.org/home2020" value="tobeeSpringStudy"/>
+	<item key="ChooseUrlDialog.location.x" value="712"/>
+	<item key="ChooseUrlDialog.location.y" value="220"/>
+	<item key="ChooseUrlDialog.size.x" value="497"/>
+	<item key="ChooseUrlDialog.size.y" value="371"/>
 	<section name="NewLocationWizard">
 		<list key="ConfigurationWizardMainPage.STORE_URL_ID">
+			<item value="svn://manbalboy.iptime.org/home2020"/>
 			<item value="svn://manbalboy.iptime.org/hsco"/>
 			<item value="svn://manbalboy.iptime.org/project"/>
 		</list>
