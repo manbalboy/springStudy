@@ -9,4 +9,7 @@
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
     <fullyQualifiedTypeName name="springbook.user.dao.UserDao"/>
+    <fullyQualifiedTypeName name="springbook.user.dao.DConnectionMaker"/>
+    <fullyQualifiedTypeName name="springbook.user.dao.ConnectionMaker"/>
+    <fullyQualifiedTypeName name="springbook.user.dao.CountingConnectionMaker"/>
 </qualifiedTypeNameHistroy>

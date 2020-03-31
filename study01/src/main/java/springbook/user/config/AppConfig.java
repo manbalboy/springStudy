@@ -12,7 +12,6 @@ import springbook.user.dao.UserDao;
 
 @Configuration
 public class AppConfig {
-	@Bean
 	public DataSource dataSource() throws ClassNotFoundException {
 	    SimpleDriverDataSource dataSource = new SimpleDriverDataSource();
 
