@@ -1,17 +1,2 @@
 INDEX VERSION 1.131+D:\dev\project\studyWorkspace\.metadata\.plugins\org.eclipse.jdt.core
-3580298845.index
-216886650.index
-1146946531.index
-1144109505.index
 3814688710.index
-2264707725.index
-1958849419.index
-3681190933.index
-2532824222.index
-586416479.index
-3775181623.index
-2336184494.index
-1517902222.index
-1930242574.index
-1285885961.index
-554220092.index

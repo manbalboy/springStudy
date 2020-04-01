@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CommitComments>	<CommitComment>xml 방식으로 스프링 의존관계 설정</CommitComment>
+<CommitComments>	<CommitComment>DataSource 적용</CommitComment>
+	<CommitComment>xml 방식으로 스프링 의존관계 설정</CommitComment>
 	<CommitComment>의존성 주입 테스트 !!!완전 신기...</CommitComment>
 	<CommitComment>Pom.xml ojdbc7 setting</CommitComment>
 	<CommitComment>스프링컨테이너 안에 있는 객체들은 같은 객체일까?</CommitComment>
