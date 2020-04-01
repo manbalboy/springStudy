@@ -4,7 +4,6 @@
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="javax.activation.DataSource"/>
     <fullyQualifiedTypeName name="java.lang.Class"/>
-    <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
     <fullyQualifiedTypeName name="springbook.user.dao.UserDao"/>
     <fullyQualifiedTypeName name="springbook.user.dao.DConnectionMaker"/>
@@ -14,4 +13,9 @@
     <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
     <fullyQualifiedTypeName name="org.springframework.jdbc.datasource.SimpleDriverDataSource"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+    <fullyQualifiedTypeName name="org.hamcrest.core.Is"/>
+    <fullyQualifiedTypeName name="springbook.user.dao.JunitCore"/>
+    <fullyQualifiedTypeName name="org.junit.runner.JUnitCore"/>
 </qualifiedTypeNameHistroy>
