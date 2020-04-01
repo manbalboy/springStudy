@@ -12,4 +12,6 @@
     <fullyQualifiedTypeName name="springbook.user.dao.DConnectionMaker"/>
     <fullyQualifiedTypeName name="springbook.user.dao.ConnectionMaker"/>
     <fullyQualifiedTypeName name="springbook.user.dao.CountingConnectionMaker"/>
+    <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
 </qualifiedTypeNameHistroy>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="CommitDialog.location.x" value="-1547"/>
-	<item key="CommitDialog.location.y" value="0"/>
+	<item key="CommitDialog.location.x" value="598"/>
+	<item key="CommitDialog.location.y" value="44"/>
 	<item key="CommitDialog.size.x" value="1174"/>
 	<item key="CommitDialog.size.y" value="859"/>
 	<item key="CommitDialog.weights.0" value="500"/>
