@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CommitComments>	<CommitComment>Junit의 기초 짱재미짐</CommitComment>
+<CommitComments>	<CommitComment>테스트 코드 오버라이딩 픽스쳐 적용</CommitComment>
+	<CommitComment>Junit의 기초 짱재미짐</CommitComment>
 	<CommitComment>TEST 코드 실습</CommitComment>
 	<CommitComment>xml Data Source 설정방식 프로퍼티 value값 설정</CommitComment>
 	<CommitComment>DataSource 적용</CommitComment>
@@ -8,5 +9,4 @@
 	<CommitComment>Pom.xml ojdbc7 setting</CommitComment>
 	<CommitComment>스프링컨테이너 안에 있는 객체들은 같은 객체일까?</CommitComment>
 	<CommitComment>Initial import.</CommitComment>
-	<CommitComment>스프링 컨텍스트 완료 1.8 버전</CommitComment>
 </CommitComments>

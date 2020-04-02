@@ -7,12 +7,9 @@ import java.sql.SQLException;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import springbook.user.domain.User;
 
@@ -24,23 +21,17 @@ import springbook.user.domain.User;
  * @discription
  * @date 2020. 4. 2.
  */
-
-@RunWith(SpringJUnit4ClassRunner.class) // 스프링의 테스트 컨텍스트 프레임워크의 Junit 확장기능
-@ContextConfiguration(locations = "/applicationContext.xml") //테스트 컨텍스트가 자동으로 만들어줄 애플리케이션 컨텍스트의 위치지정
 public class UserDaoTest {
 	private UserDao dao;
 	private User user;
 	private User user1;
 	private User user2;
-	//의존성주입
-	@Autowired
-	private ApplicationContext applicationContext ;
 
 	@Before
 	public void setUp() {
-		System.out.println(this.applicationContext);
-		System.out.println(this);
-		this.dao = this.applicationContext.getBean("userDao", UserDao.class);
+		ApplicationContext applicationContext = new GenericXmlApplicationContext("applicationContext.xml");
+		//AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+		this.dao = applicationContext.getBean("userDao", UserDao.class);
 		this.user = new User("manbalboy", "정훈", "test1");
 		this.user1 = new User("kimsj", "김선중", "test2");
 		this.user2 = new User("Namsh", "남수현", "test3");
