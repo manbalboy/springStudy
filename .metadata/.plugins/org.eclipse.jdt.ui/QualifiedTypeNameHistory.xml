@@ -17,13 +17,18 @@
     <fullyQualifiedTypeName name="org.hamcrest.core.Is"/>
     <fullyQualifiedTypeName name="springbook.user.dao.JunitCore"/>
     <fullyQualifiedTypeName name="org.junit.runner.JUnitCore"/>
-    <fullyQualifiedTypeName name="java.sql.SQLException"/>
-    <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
-    <fullyQualifiedTypeName name="springbook.user.domain.User"/>
     <fullyQualifiedTypeName name="org.springframework.dao.EmptyResultDataAccessException"/>
     <fullyQualifiedTypeName name="org.junit.Before"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
     <fullyQualifiedTypeName name="org.springframework.test.context.ContextConfiguration"/>
     <fullyQualifiedTypeName name="org.springframework.test.context.junit4.SpringJUnit4ClassRunner"/>
+    <fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="springbook.user.dao.DeleteAllStatement"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="springbook.user.domain.User"/>
+    <fullyQualifiedTypeName name="springbook.user.dao.StatementStrategy"/>
+    <fullyQualifiedTypeName name="springbook.user.dao.AddStatement"/>
 </qualifiedTypeNameHistroy>
