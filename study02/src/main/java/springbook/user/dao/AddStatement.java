@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import springbook.user.domain.User;
 
 public class AddStatement implements StatementStrategy {
-	User user;
+	final User user;
 
 	public AddStatement(User user) {
 		this.user = user;
