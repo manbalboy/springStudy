@@ -1,3 +1,0 @@
-INDEX VERSION 1.131
-D:\dev\project\studyWorkspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\687604400.index
-\webTest\src\main\resources
