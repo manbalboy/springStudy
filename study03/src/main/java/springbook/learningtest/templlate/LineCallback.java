@@ -7,6 +7,6 @@ package springbook.learningtest.templlate;
  * @discription
  * @date 2020. 4. 6.
  */
-public interface LineCallback {
-	Integer doSomethingWithLine (String line, Integer value);
+public interface LineCallback<T> {
+	T doSomethingWithLine (String line, T value);
 }
