@@ -13,38 +13,26 @@ import java.io.IOException;
  */
 public class Calculator {
 	public Integer calcSum (String filepath) throws IOException {
-		BufferedReaderCallback sumCallback = new BufferedReaderCallback() {
-			public Integer doSomethingWithReader(BufferedReader br) throws IOException {
-				Integer sum = 0;
-				String line = null;
+		LineCallback sumCallback = new LineCallback() {
 
-				while((line = br.readLine())!=null) {
-					sum += Integer.valueOf(line);
-				}
-				return sum;
+			public Integer doSomethingWithLine(String line, Integer value) {
+				return value + Integer.valueOf(line);
 			}
 		};
 
-		return fileReadTemplate(filepath, sumCallback);
+		return lineReadTemplate(filepath, sumCallback, 0);
 	}
 
 
 	public Integer calcMultiply(String filepath) throws IOException {
-		BufferedReaderCallback multiplyCallback = new BufferedReaderCallback() {
+		LineCallback multiplyCallback = new LineCallback() {
 
-			public Integer doSomethingWithReader(BufferedReader br) throws IOException {
-				Integer multiply = 1;
-				String line = null;
-
-				while((line = br.readLine())!=null) {
-					multiply *= Integer.valueOf(line);
-				}
-				return multiply;
+			public Integer doSomethingWithLine(String line, Integer value) {
+				return value * Integer.valueOf(line);
 			}
 		};
 
-
-		return fileReadTemplate(filepath, multiplyCallback);
+		return lineReadTemplate(filepath, multiplyCallback, 1);
 	};
 
 
@@ -66,5 +54,35 @@ public class Calculator {
 				}
 			}
 		}
+	};
+
+
+	public Integer lineReadTemplate (String filepath, LineCallback callback, int initVal) throws IOException{
+		BufferedReader br = null;
+		try {
+			br = new BufferedReader(new FileReader(filepath));
+
+			Integer res = initVal;
+			String line = null ;
+			while ((line = br.readLine())!=null) {
+				res = callback.doSomethingWithLine(line, res);
+			}
+
+			return res;
+
+		} catch (IOException e) {
+			System.out.println(">>>>>>>>>>>>>>" + e.getMessage());
+			throw e;
+		} finally {
+			if(br != null) { // BufferedReader 오브젝트가 생성되기 전에 예외가 발생할 수도 있기 때문에 null 체크 필수
+				try {
+					br.close();
+				} catch (IOException e) {
+					System.out.println(">>>>>>>>>>>>>>" + e.getMessage());
+				}
+			}
+		}
+
+
 	}
 }
