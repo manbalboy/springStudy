@@ -3,10 +3,13 @@ package springbook.user.dao;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+
 /**
  * @author 정훈
- * @discription
- * @date 2020. 4. 1.
+ * @Email manbalboy@hanmail.net
+ * @githum https://github.com/manbalboy
+ * @discription Connection Count
+ * @date 2020. 4. 7.
  */
 public class CountingConnectionMaker implements ConnectionMaker {
 	int count = 0;
@@ -18,6 +21,7 @@ public class CountingConnectionMaker implements ConnectionMaker {
 
 
 
+	@Override
 	public Connection makeConnection() throws ClassNotFoundException, SQLException {
 		this.count++;
 		return  realConnectionMaker.makeConnection();

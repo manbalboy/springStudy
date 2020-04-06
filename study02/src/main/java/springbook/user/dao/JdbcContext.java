@@ -6,6 +6,13 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+/**
+ * @author 정훈
+ * @Email manbalboy@hanmail.net
+ * @githum https://github.com/manbalboy
+ * @discription 스프링템플릿 메소드 사용하기전 템플릿메소드 체험
+ * @date 2020. 4. 7.
+ */
 public class JdbcContext {
 	private DataSource dataSource;
 

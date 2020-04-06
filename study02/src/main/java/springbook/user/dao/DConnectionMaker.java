@@ -6,11 +6,14 @@ import java.sql.SQLException;
 
 /**
  * @author 정훈
- * @discription 다음 디비커넥션
- * @date 2020. 3. 31.
+ * @Email manbalboy@hanmail.net
+ * @githum https://github.com/manbalboy
+ * @discription connection 정보 빼낸 Class
+ * @date 2020. 4. 7.
  */
 public class DConnectionMaker implements ConnectionMaker {
 
+	@Override
 	public Connection makeConnection() throws ClassNotFoundException, SQLException {
 		String user = "hr";
         String pw = "hr";

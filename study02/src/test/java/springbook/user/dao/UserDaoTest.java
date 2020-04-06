@@ -4,6 +4,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -44,6 +45,19 @@ public class UserDaoTest {
 		this.user = new User("manbalboy", "정훈", "test1");
 		this.user1 = new User("kimsj", "김선중", "test2");
 		this.user2 = new User("Namsh", "남수현", "test3");
+	}
+
+	@Test
+	public void getAll() throws SQLException, ClassNotFoundException{
+		dao.deleteAll();
+		List<User> users0 = dao.getAll();
+		assertThat(users0.size(), is(0));
+
+		dao.add(user);
+		dao.add(user1);
+		dao.add(user2);
+		users0 = dao.getAll();
+		assertThat(users0.size(), is(3));
 	}
 
 	@Test
