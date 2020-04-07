@@ -15,6 +15,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import springbook.user.domain.Level;
 import springbook.user.domain.User;
 
 
@@ -34,6 +35,15 @@ public class UserDaoTest {
 	private User user1;
 	private User user2;
 	//의존성주입
+	private void checkSameUser(User user1, User user2) {
+		assertThat(user1.getId(), is(user2.getId()));
+		assertThat(user1.getLevel(), is(user2.getLevel()));
+		assertThat(user1.getName(), is(user2.getName()));
+		assertThat(user1.getLogin(), is(user2.getLogin()));
+		assertThat(user1.getRecommend(), is(user2.getRecommend()));
+		assertThat(user1.getPassword(), is(user2.getPassword()));
+	}
+
 	@Autowired
 	private ApplicationContext applicationContext ;
 
@@ -42,9 +52,9 @@ public class UserDaoTest {
 		System.out.println(this.applicationContext);
 		System.out.println(this);
 		this.dao = this.applicationContext.getBean("userDao", UserDao.class);
-		this.user = new User("manbalboy", "정훈", "test1");
-		this.user1 = new User("kimsj", "김선중", "test2");
-		this.user2 = new User("Namsh", "남수현", "test3");
+		this.user = new User("manbalboy", "정훈", "test1" , Level.BASIC, 1, 0);
+		this.user1 = new User("kimsj", "김선중", "test2" , Level.SILVER, 55 , 10);
+		this.user2 = new User("Namsh", "남수현", "test3", Level.GOLD, 100, 40);
 	}
 
 	@Test
@@ -73,16 +83,13 @@ public class UserDaoTest {
 
 
 		User userTest = dao.get(user.getId());
-		assertThat("패스워드 검증 :", userTest.getPassword() , is(user.getPassword() ) );
-		assertThat("이름 검증 :", userTest.getName(), is(user.getName() ) );
+		checkSameUser(userTest, user);
 
 		User userTest1 = dao.get(user1.getId());
-		assertThat("패스워드 검증 :", userTest1.getPassword() , is(user1.getPassword() ) );
-		assertThat("이름 검증 :", userTest1.getName(), is(user1.getName() ) );
+		checkSameUser(userTest1, user1);
 
 		User userTest2 = dao.get(user2.getId());
-		assertThat("패스워드 검증 :", userTest2.getPassword() , is(user2.getPassword() ) );
-		assertThat("이름 검증 :", userTest2.getName(), is(user2.getName() ) );
+		checkSameUser(userTest2, user2);
 
 	}
 
@@ -107,6 +114,14 @@ public class UserDaoTest {
 		assertThat("삭제후 카운트 0",dao.getCount(),is(0));
 
 		dao.get("nulllllllllll!");
+	}
+//	@Test(expected = DataAccessException.class)
+	//@Test
+	public void duplcaiateKey() {
+		dao.deleteAll();
+
+		dao.add(user);
+		dao.add(user);
 	}
 
 
