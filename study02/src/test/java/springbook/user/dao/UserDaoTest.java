@@ -125,5 +125,23 @@ public class UserDaoTest {
 	}
 
 
+	@Test
+	public void update() {
+		dao.deleteAll();
+		dao.add(user);
+		dao.add(user1);
+		user.setName("오민구");
+		user.setPassword("spring566");
+		user.setLevel(Level.GOLD);
+		user.setLogin(1000);
+		user.setRecommend(999);
+		dao.update(user);
+		User user1update = dao.get(user.getId());
+		checkSameUser(user, user1update);
+		User user2same = dao.get(user1.getId());
+		checkSameUser(user1, user2same);
+	}
+
+
 
 }
